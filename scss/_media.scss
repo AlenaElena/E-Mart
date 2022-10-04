@@ -44,13 +44,16 @@
   }
 
   .popup {
-    &__content {
-      max-width: 750px;
-      min-height: 650px;
+    &__close {
+      .icon {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
-
   .popup__swiper {
+    max-width: 400px;
+    height: 300px;
     &-button {
       display: none;
     }
@@ -232,15 +235,12 @@
   }
 
   .popup {
-    &__body {
-      padding: 5px;
-    }
     &__content {
-      padding: 20px;
-      max-width: 450px;
-      min-height: 400px;
+      padding: 30px;
     }
     &__close {
+      top: 10px;
+      right: 10px;
       .icon {
         width: 20px;
         height: 20px;
@@ -254,6 +254,8 @@
     font-size: 20px;
   }
   .popup__swiper {
+    max-width: 250px;
+    height: 200px;
     margin: 10px auto 0;
     .swiper-pagination-bullet {
       display: none;
@@ -387,12 +389,6 @@
     }
   }
 
-  .popup {
-    &__content {
-      max-width: 340px;
-      min-height: 300px;
-    }
-  }
   .popup__info-title {
     font-size: 25px;
   }
