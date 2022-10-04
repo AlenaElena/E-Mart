@@ -45,8 +45,8 @@
 
   .popup {
     &__content {
-      width: 750px;
-      height: 650px;
+      max-width: 750px;
+      min-height: 650px;
     }
   }
 
@@ -237,8 +237,8 @@
     }
     &__content {
       padding: 20px;
-      width: 450px;
-      height: 400px;
+      max-width: 450px;
+      min-height: 400px;
     }
     &__close {
       .icon {
@@ -389,8 +389,8 @@
 
   .popup {
     &__content {
-      width: 340px;
-      height: 300px;
+      max-width: 340px;
+      min-height: 300px;
     }
   }
   .popup__info-title {

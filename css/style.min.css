@@ -2176,6 +2176,8 @@ button.swiper-pagination-bullet {
   z-index: 40;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
   -webkit-transform: translate(-50%, -50%) scale(0);
       -ms-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
@@ -2203,8 +2205,10 @@ button.swiper-pagination-bullet {
   padding: 50px;
   position: relative;
   z-index: 20;
-  width: 1000px;
-  height: 800px;
+  width: 100%;
+  min-height: 850px;
+  max-width: 1200px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2262,6 +2266,7 @@ button.swiper-pagination-bullet {
 }
 
 .popup__swiper {
+  position: inherit;
   width: 100%;
   height: 100%;
   max-width: 550px;
@@ -2310,7 +2315,7 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   border: 2px solid #677f8b;
   background-color: rgba(0, 0, 0, 0);
-  top: 55%;
+  top: 50%;
   cursor: pointer;
 }
 
@@ -2322,11 +2327,11 @@ button.swiper-pagination-bullet {
 }
 
 .popup__swiper-button--next {
-  right: 130px;
+  right: 0;
 }
 
 .popup__swiper-button--prev {
-  left: 130px;
+  left: 0;
 }
 
 .popup__swiper .swiper-pagination-bullet {
@@ -2388,8 +2393,8 @@ button.swiper-pagination-bullet {
   }
 
   .popup__content {
-    width: 750px;
-    height: 650px;
+    max-width: 750px;
+    min-height: 650px;
   }
 
   .popup__swiper-button {
@@ -2575,8 +2580,8 @@ button.swiper-pagination-bullet {
 
   .popup__content {
     padding: 20px;
-    width: 450px;
-    height: 400px;
+    max-width: 450px;
+    min-height: 400px;
   }
 
   .popup__close .icon {
@@ -2744,8 +2749,8 @@ button.swiper-pagination-bullet {
   }
 
   .popup__content {
-    width: 340px;
-    height: 300px;
+    max-width: 340px;
+    min-height: 300px;
   }
 
   .popup__info-title {
