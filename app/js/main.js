@@ -1,3 +1,4 @@
+      // HEADER BURGER-BTN-MENU
 let burgerBtn = document.querySelector('.header__burger');
 let headerSidebar = document.querySelector('.header__sidebar')
 burgerBtn.addEventListener('click', function(){
@@ -5,7 +6,7 @@ burgerBtn.addEventListener('click', function(){
   headerSidebar.classList.toggle('header__sidebar--active');
 });
 
-
+      // HEADER-SLIDER
 const swiper = new Swiper(".header__swiper", {
   pagination: {
     el: ".pagination",
@@ -13,18 +14,7 @@ const swiper = new Swiper(".header__swiper", {
   },
 });
 
-const tooltips = document.querySelectorAll('.header__swiper-tooltip');
-tooltips.forEach(el => {
-  const tooltipContent = el.querySelector('.header__swiper-tooltip__content');
-  const tooltipMarker = el.querySelector('.header__swiper-tooltip__marker');
-
-  tooltipMarker.addEventListener('click', function(){
-    tooltipContent.classList.toggle('header__swiper-tooltip__content--active')
-  })
-});
-
-
-
+      // PRODUCT-TAB
 const tabItems = document.querySelectorAll('.products__cards-top__item');
 const tabContents = document.querySelectorAll('.products__cards-content__item');
 
@@ -48,7 +38,7 @@ tabItems.forEach(tabItem => {
 });
 
 
-
+        // FAVORITE ICON
 const cardItems = document.querySelectorAll('.products__card-item__menu')
 cardItems.forEach(el => {
   const linkFavorite = el.querySelector('.products__card-item__link-favorite');
@@ -58,42 +48,38 @@ cardItems.forEach(el => {
 });
 
 
-
-const overlay = document.querySelector('.overlay');
-
-document.querySelectorAll('.popup-item').forEach(item  => {
-  const popup = item.querySelector('.popup');
-  const openPopup = item.querySelector('.popup__open');
-      
-  openPopup.addEventListener('click', function(e){
-    openModal(popup)
-    e.preventDefault();
-  })
+        // POPUP
+document.addEventListener("DOMContentLoaded", function() {
+  let overlay = document.querySelector('.overlay');
+  document.querySelectorAll('.popup-item').forEach(item  => {
+    const popup = item.querySelector('.popup');
+    const openPopup = item.querySelector('.popup__open');
         
-  const closePopup = item.querySelector('.popup__close');
-  closePopup.addEventListener('click', function(e){
-    closeModal(popup)
-    e.preventDefault();
-  })
-      
-  overlay.addEventListener('click', function(){
-    closeModal(popup)
-  })
- });
+    openPopup.addEventListener('click', function(e){
+      openModal(popup)
+      e.preventDefault();
+    })
+          
+    const closePopup = item.querySelector('.popup__close');
+    closePopup.addEventListener('click', function(e){
+      closeModal(popup)
+      e.preventDefault();
+    })
+        
+  });
+    
+  function openModal(popup) {
+    popup.classList.add('popup--active')
+    overlay.classList.add('overlay--active')
+  }
 
-function openModal(popup) {
-  popup.classList.add('popup--active')
-  overlay.classList.add('overlay--active')
-}
+  function closeModal(popup) {
+    popup.classList.remove('popup--active')
+    overlay.classList.remove('overlay--active')
+  }
+})
 
-function closeModal(popup) {
-  popup.classList.remove('popup--active')
-  overlay.classList.remove('overlay--active')
-}
-
-
-
-
+      // POPUP-SLIDER
 const swiperPopap = new Swiper(".popup__swiper", {
   slidesPerView: 1,
   loop: true,
